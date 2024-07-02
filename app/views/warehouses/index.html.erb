@@ -1,0 +1,15 @@
+<h2>E-Commerce App</h2>
+
+<% if @warehouses.empty? %>
+  <h2>No warehouses found.</h2>
+<% else %>
+  <% @warehouses.each do |w| %>
+    <div>
+      <h4><%= link_to w.name, warehouse_path(w.id) %></h4>
+      <p><%= w.code %></p>
+    </div>
+  <% end %>
+<% end %>
+
+
+
